@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #5f5a5a;
+        }
+        div .class{
+            text-align: center;
+            font-size: 39px;
+            align-content: center;
+            margin-top: 30vmax;
+        }
+    </style>
+</head>
+<body>
+    <div class="project">
+        <div id="insert">
+            <div class="class">Press the key and watch the magic </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const insert= document.getElementById("insert")
+    document.addEventListener('keydown', (e)=>{
+        insert.innerHTML= "Hey "
+    });
+</script>
+</html>

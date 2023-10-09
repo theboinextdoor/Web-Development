@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asyncronization project 2</title>
+</head>
+<body>
+      <h1 id="myheading"> This is project 2  </h1>
+      <button id="start" style="margin-bottom: 10px; padding: 20px; background-color: #79a2a4; cursor: pointer">start</button> <br>
+      <button id="stop" style="margin-bottom: 10px; padding: 20px ; background-color: cornflowerblue ; cursor: pointer">Stop</button>
+
+</body>
+<script>
+
+    // const sayDate =  function (str){
+    //     console.log(str , Date.now())
+    // }
+    // const intervalId= setInterval( sayDate, 1000, "hie");
+    //
+    // clearInterval(intervalId)
+
+
+    const startButton = document.querySelector("#start")
+    const interval = startButton.addEventListener('click', function (){
+        console.log("hey i've been clicked by the user. ", Date.now())
+    })
+
+    setInterval(interval,1000)
+
+    const stopButton = document.querySelector("#stop")
+    stopButton.addEventListener('click', function(){
+        console.log("hey Program is being stopped")
+    })
+
+
+
+
+</script>
+</html>

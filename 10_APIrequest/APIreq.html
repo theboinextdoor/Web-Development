@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API request</title>
+</head>
+<body>
+
+</body>
+<script>
+    const requestURL = 'https://github.com/theboinextdoor'
+    const xhr= new XMLHttpRequest()
+    xhr.open('GET', requestURL)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState== 4){
+            console.log(this.responseText)
+        }
+    }
+    xhr.send();
+</script>
+</html>

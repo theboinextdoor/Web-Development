@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change color</title>
+</head>
+<body>
+        <h1 class="myheading">Start shiuld change the color every second </h1>
+        <button id="start" style="margin-bottom: 10px; padding: 20px; background-color: #79a2a4; cursor: pointer">Start</button>
+        <button id="stop" style="margin-bottom: 10px; padding: 20px ; background-color: cornflowerblue ; cursor: pointer">Stop</button>
+</body>
+<script>
+    //generate random color
+    const randomColor = function (){
+        const hexValue = "0123456789ABCDEF"
+        let color = "#";
+
+        for(let i=0; i<6; i++){
+            //random color with random() method
+            color += hexValue[Math.floor(Math.random() *16)];
+        }
+        return color;
+    };
+
+
+    let intervalId
+    const startchangingColor = function (){
+        if(!intervalId){
+            intervalId= setInterval(changebgcolor, 100)
+        }
+        function changebgcolor(){
+            document.body.style.backgroundColor = randomColor()
+
+        }
+    };
+
+    const stopchangingColor = function (){
+        clearInterval(intervalId)
+        document.body.style.backgroundColor = "white"
+        intervalId= null
+    };
+
+    document.querySelector("#start").addEventListener('click', startchangingColor);
+    document.querySelector("#stop").addEventListener('click', stopchangingColor);
+
+
+
+</script>
+</html>
